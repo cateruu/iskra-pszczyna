@@ -1,0 +1,636 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  blueMenu: rgb(39, 68, 142),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$transition: 0.2s;
+$tablet: 750px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.main {
+  &__sponsor {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 200px;
+    display: flex;
+    margin-bottom: 0;
+
+    @include tablet {
+      height: 130px;
+      border-top: 1px solid color(blueText);
+    }
+
+    &__svg {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 50px;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &__bg {
+      display: none;
+      width: 200px;
+      height: 101%;
+      background-color: color(blue);
+      z-index: 5;
+
+      @include tablet {
+        display: block;
+      }
+    }
+
+    &__bg::after {
+      display: block;
+      content: "";
+      width: 300px;
+      height: 300px;
+      background-color: color(blue);
+      transform: rotate(-60deg);
+      position: relative;
+      left: -30px;
+      top: -150px;
+      z-index: 2;
+    }
+
+    &__header {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 20px;
+      font-weight: 400;
+      color: white;
+      z-index: 5;
+
+      @include tablet {
+        font-size: 30px;
+        top: 50%;
+        left: 110px;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__images {
+      position: relative;
+      top: 50px;
+      height: calc(100% - 50px);
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-grow: 1;
+
+      @include tablet {
+        top: 0;
+      }
+
+      &__img {
+        position: relative;
+        margin: 0 20px;
+        align-self: center;
+      }
+    }
+  }
+
+  &__partner {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 130px;
+    display: none;
+    margin-bottom: 0;
+    border-top: 1px solid color(blueText);
+
+    @include desktop {
+      display: flex;
+    }
+
+    &__bg {
+      display: block;
+      background-color: color(blue);
+      z-index: 5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 200px;
+      height: 101%;
+    }
+
+    &__bg::before {
+      content: "";
+      width: 300px;
+      height: 300px;
+      background-color: color(blue);
+      transform: rotate(60deg);
+      position: absolute;
+      right: 0px;
+      top: -150px;
+      z-index: 2;
+    }
+
+    &__header {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      font-weight: 400;
+      color: white;
+      z-index: 100;
+    }
+
+    &__images {
+      position: relative;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__container {
+    &__mecze {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background-color: color(blueMenu);
+      margin-bottom: 80px;
+
+      @include desktop {
+        display: none;
+      }
+
+      &__backlogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          height: 350px;
+          opacity: 6%;
+        }
+      }
+
+      &__content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &__single {
+          width: 100%;
+          height: 50%;
+          position: relative;
+
+          &__data {
+            position: absolute;
+            top: 40px;
+            width: 100%;
+
+            p {
+              text-align: center;
+              color: white;
+              font-size: 18px;
+              font-weight: 700;
+            }
+          }
+
+          &__container {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 64px);
+            position: relative;
+            top: 64px;
+
+            &__team {
+              width: calc(50% - 40px);
+              position: relative;
+
+              &__container {
+                width: 110px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+
+                img {
+                  height: 120px;
+                  position: absolute;
+                  right: 0;
+                  top: 10px;
+                }
+
+                &__text {
+                  text-align: center;
+                  color: white;
+                  position: absolute;
+                  top: 120px;
+                }
+              }
+            }
+
+            &__vs {
+              width: 80px;
+
+              &__text {
+                position: absolute;
+                top: 40px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 25px;
+              }
+
+              &__wynik {
+                position: absolute;
+                top: 70px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: 30px;
+                font-weight: 700;
+              }
+            }
+
+            &__team2 {
+              width: calc(50% - 40px);
+              position: relative;
+
+              &__container {
+                width: 110px;
+                height: 100%;
+                position: absolute;
+                left: 0;
+
+                img {
+                  height: 110px;
+                  position: absolute;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  top: 10px;
+                }
+
+                &__text {
+                  width: 100%;
+                  text-align: center;
+                  color: white;
+                  position: absolute;
+                  top: 125px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__tabela {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      margin-bottom: 40px;
+
+      &__header {
+        position: absolute;
+        top: -30px;
+        height: 40px;
+        width: 100%;
+        color: white;
+        font-weight: 700;
+        font-size: 25px;
+        background-color: color(blue);
+        text-align: center;
+        line-height: 40px;
+        z-index: 5;
+      }
+
+      &__table {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 360px;
+        border-bottom: none;
+        z-index: 100;
+
+        @include tablet {
+          width: 600px;
+        }
+
+        @include desktop {
+          width: 900px;
+        }
+
+        tr:nth-of-type(1) {
+          td {
+            padding: 15px 0;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            outline: none;
+          }
+        }
+
+        td {
+          padding: 5px 0;
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      &__table2 {
+        width: 110%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+
+        tr:nth-of-type(1) {
+          td {
+            background-color: color(blue);
+            height: 52px;
+            width: 110%;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+
+    &__footer {
+      bottom: 0;
+    }
+  }
+}
+
+.mainPC {
+  &__mecze {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: color(blueMenu);
+    display: none;
+    margin: 40px 0 80px 0;
+
+    @include desktop {
+      display: block;
+    }
+
+    &__backLogo {
+      position: absolute;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      opacity: 0.1;
+    }
+
+    &__mecz {
+      width: 400px;
+      height: 85%;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+
+      &__data {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      &__teams {
+        display: flex;
+
+        &__team {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            width: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__team2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            height: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__vs {
+          position: absolute;
+          bottom: 0;
+          left: 150px;
+          height: 80%;
+          width: 100px;
+
+          &__text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &__wynik {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    &__mecz2 {
+      width: 400px;
+      height: 85%;
+      position: absolute;
+      top: 50%;
+      right: 8%;
+      transform: translateY(-50%);
+
+      &__data {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      &__teams {
+        display: flex;
+
+        &__team {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            width: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__team2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            height: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__vs {
+          position: absolute;
+          bottom: 0;
+          left: 150px;
+          height: 80%;
+          width: 100px;
+
+          &__text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &__wynik {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.blueOne {
+  background-color: color(blueImage);
+}
+
+.blueTwo {
+  background-color: color(blueText);
+}
+
+.blueThree {
+  background-color: color(blue);
+}

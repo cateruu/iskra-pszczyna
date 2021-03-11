@@ -1,0 +1,96 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  blueMenu: rgb(39, 68, 142),
+  blueMenuA: rgba(39, 68, 142, 0.85),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$transition: 0.2s;
+$tablet: 750px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.main {
+  &__header {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__sections {
+    width: 80%;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include desktop {
+      width: 60%;
+      top: 100px;
+      margin-bottom: 140px;
+    }
+
+    &__section {
+      margin: 40px 0;
+      text-align: center;
+
+      &__header {
+        font-size: 28px;
+        font-weight: 700;
+        color: color(blue);
+        margin-bottom: 20px;
+
+        @include desktop {
+          font-size: 30px;
+        }
+      }
+
+      &__text {
+        font-size: 16px;
+        color: color(gray);
+
+        @include desktop {
+          font-size: 20px;
+        }
+
+        &__header {
+          font-size: 18px;
+          font-weight: 700;
+          color: color(blue);
+          margin-bottom: 10px;
+
+          @include desktop {
+            font-size: 22px;
+          }
+        }
+      }
+
+      &__textU {
+        font-size: 16px;
+        color: color(blueText);
+
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

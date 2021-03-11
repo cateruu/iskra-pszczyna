@@ -1,0 +1,200 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  blueMenu: rgb(39, 68, 142),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$transition: 0.2s;
+$tablet: 750px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.main {
+  &__zdjecia {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include tablet {
+      height: 400px;
+    }
+
+    @include desktop {
+      top: 100px;
+    }
+
+    .z {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+
+      @include tablet {
+        height: 400px;
+        width: 70%;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 101%;
+        max-width: 101%;
+        min-height: 100%;
+      }
+    }
+
+    &__item {
+      position: relative;
+      width: 50%;
+      height: 100px;
+      overflow: hidden;
+      display: block;
+      float: left;
+
+      @include tablet {
+        clear: both;
+        width: 30%;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 101%;
+        min-height: 100%;
+      }
+    }
+
+    &__item:nth-of-type(2) {
+      @include tablet {
+        top: 50%;
+      }
+    }
+  }
+
+  &__zdjeciaT {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include tablet {
+      height: 400px;
+    }
+
+    .z {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+
+      @include tablet {
+        height: 400px;
+        width: 70%;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 101%;
+        max-width: 101%;
+        min-height: 100%;
+      }
+    }
+
+    &__item {
+      position: relative;
+      width: 50%;
+      height: 100px;
+      overflow: hidden;
+      display: block;
+      float: left;
+
+      @include tablet {
+        clear: both;
+        width: 30%;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 101%;
+        min-height: 100%;
+      }
+    }
+
+    &__item:nth-of-type(2) {
+      @include tablet {
+        top: 50%;
+      }
+    }
+  }
+
+  &__baza {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include tablet {
+      width: 70%;
+    }
+
+    &__header {
+      color: color(blue);
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 20px;
+
+      @include tablet {
+        font-size: 30px;
+      }
+    }
+
+    &__text {
+      color: color(gray);
+      padding: 0 10px;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
+}

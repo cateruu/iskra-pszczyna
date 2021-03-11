@@ -1,0 +1,17 @@
+RewriteEngine On
+
+
+
+RewriteRule ^login$ ../insert.php
+RewriteRule ^panel$ dashboard-panel.php
+RewriteRule ^zmiana-hasla$ includes/changePwd.php
+RewriteRule ^nowy$ dodaj.php
+RewriteRule ^edycja$ menadzer.php
+RewriteRule ^liga$ tabela.php
+RewriteRule ^nastepny-mecz$ mecze.php
+RewriteRule ^edytowanie-postu$ edit.php
+RewriteRule ^usuniecie$ remove.php
+RewriteRule ^druzyny$ teams.php
+RewriteRule ^edit-klub$ edytowanie-klubu.php
+RewriteRule ^tabela-edit$ tabelaE.php
+RewriteRule ^live$ transmisja.php

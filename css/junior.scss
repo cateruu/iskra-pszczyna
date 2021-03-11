@@ -1,0 +1,1055 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  blueMenu: rgb(39, 68, 142),
+  blueMenuA: rgba(39, 68, 142, 0.85),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$transition: 0.2s;
+$tablet: 750px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: color(blue);
+    z-index: 2;
+
+    @include tablet {
+      height: 400px;
+    }
+
+    @include desktop {
+      height: 700px;
+      top: 100px;
+    }
+
+    &__imgContainer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &__img {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.2);
+        max-width: 100%;
+        min-height: 100%;
+        z-index: 1;
+      }
+
+      .opacity {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: color(blueImage);
+      }
+    }
+
+    &__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: grid;
+      grid-template-rows: 50px 130px;
+      grid-template-columns: 40% 60%;
+      grid-template-areas:
+        "text hamburger"
+        "logo nic";
+      z-index: 5;
+
+      @include tablet {
+        grid-template-rows: 150px 200px;
+        grid-template-columns: 60% 40%;
+      }
+
+      @include desktop {
+        display: none;
+      }
+
+      &__backLogo {
+        grid-area: text;
+        position: relative;
+        text-align: center;
+        z-index: 0;
+
+        @include tablet {
+          grid-area: text;
+        }
+
+        img {
+          opacity: 0.1;
+          height: 180px;
+          width: 100%;
+          z-index: 1;
+
+          @media (min-width: 420px) {
+            width: 162px;
+          }
+
+          @include tablet {
+            margin-top: 120px;
+            width: 300px;
+            height: 310px;
+          }
+        }
+      }
+
+      &__text {
+        grid-area: text;
+        text-align: center;
+        color: white;
+
+        &__header {
+          font-size: 22px;
+          font-weight: 700;
+          margin-top: 5px;
+
+          @include tablet {
+            font-size: 60px;
+          }
+        }
+
+        &__under {
+          font-size: 11px;
+          font-weight: 700;
+
+          @include tablet {
+            font-size: 30px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      &__hamburger {
+        grid-area: hamburger;
+        position: relative;
+
+        @include tablet {
+          right: 30px;
+          top: 20px;
+        }
+
+        #hamburger {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 50px;
+          width: 50px;
+          cursor: pointer;
+        }
+        #segregacja {
+          height: 25px;
+          width: 25px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .s {
+          height: 4px;
+          width: 25px;
+          background-color: white;
+          display: block;
+          border-radius: 5px;
+          transition: 0.2s;
+        }
+        #s1 {
+          transform: translateY(-3px);
+        }
+        #s3 {
+          transform: translateY(3px);
+        }
+      }
+
+      &__logo {
+        grid-area: logo;
+        text-align: center;
+        z-index: 5;
+
+        img {
+          margin-top: 10px;
+          height: 80%;
+          z-index: 5;
+
+          @include tablet {
+            height: 120%;
+          }
+        }
+      }
+    }
+
+    &__containerPC {
+      display: none;
+
+      @include desktop {
+        position: absolute;
+        top: 40%;
+        left: 50px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        color: white;
+        z-index: 5;
+        width: 400px;
+      }
+
+      &__header {
+        margin-bottom: 20px;
+
+        &__h {
+          font-size: 48px;
+          font-weight: 700;
+        }
+
+        &__t {
+          font-size: 25px;
+          margin-top: -10px;
+        }
+      }
+
+      &__text {
+        margin-bottom: 20px;
+      }
+
+      &__link {
+        width: 200px;
+        height: 50px;
+        display: block;
+        background-color: white;
+        color: color(blue);
+        text-decoration: none;
+        line-height: 50px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__wybor {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: color(blue);
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    z-index: 2;
+    cursor: pointer;
+
+    @include desktop {
+      height: 100px;
+      background-color: color(blueMenuA);
+      line-height: 100px;
+    }
+
+    &__text {
+      font-size: 20px;
+      display: inline;
+    }
+
+    .arrow {
+      margin-left: 10px;
+      transform: rotate(0);
+      transition: $transition;
+    }
+
+    .switch {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+    top: -480px;
+    transition: 0.6s;
+
+    @include tablet {
+      height: 100%;
+    }
+
+    &__roczniki {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-height: 400px;
+      position: relative;
+      z-index: 0;
+      transition: 0.6s;
+
+      &__img {
+        opacity: 0.1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      &__zwin {
+        position: relative;
+        height: 60px;
+        background-color: color(blue);
+        color: white;
+        text-align: center;
+        line-height: 60px;
+        z-index: -1;
+        cursor: pointer;
+
+        &__text {
+          font-size: 20px;
+          display: inline;
+        }
+
+        .arrow {
+          margin-left: 10px;
+          transform: rotate(-90deg);
+          transition: $transition;
+        }
+      }
+
+      &__date {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        color: color(blueText);
+        font-size: 18px;
+        z-index: -1;
+      }
+    }
+
+    &__aktualnosci {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: color(blueImage);
+
+      @include tablet {
+        height: 500px;
+      }
+    }
+
+    &__about {
+      width: 80%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+      @include tablet {
+        width: 70%;
+      }
+
+      @include desktop {
+        width: 60%;
+      }
+
+      &__header {
+        color: color(blue);
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        @include tablet {
+          font-size: 30px;
+        }
+      }
+
+      &__text {
+        color: color(gray);
+        padding: 0 10px;
+
+        @include tablet {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__info {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 200px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-template-areas:
+        "player succes"
+        "trener lata";
+      margin-bottom: 40px;
+
+      @include tablet {
+        width: 90%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__box {
+        text-align: center;
+
+        @include tablet {
+          padding: 0 30px;
+        }
+
+        &__header {
+          color: color(blue);
+          font-weight: 700;
+          font-size: 26px;
+          margin-top: 20px;
+          margin-bottom: 2px;
+
+          @include tablet {
+            font-size: 34px;
+          }
+        }
+
+        &__text {
+          color: color(gray);
+          font-size: 15px;
+
+          @include tablet {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .player {
+        grid-area: player;
+        border-right: 1px solid color(grayLighter);
+        border-bottom: 1px solid color(grayLighter);
+
+        @include tablet {
+          border: none;
+          border-right: 1px solid color(grayLighter);
+        }
+      }
+
+      .succes {
+        grid-area: succes;
+        border-bottom: 1px solid color(grayLighter);
+
+        @include tablet {
+          border: none;
+          border-right: 1px solid color(grayLighter);
+        }
+      }
+
+      .trener {
+        grid-area: trener;
+        border-right: 1px solid color(grayLighter);
+
+        @include tablet {
+          border: none;
+          border-right: 1px solid color(grayLighter);
+        }
+      }
+
+      .lata {
+        grid-area: lata;
+      }
+    }
+
+    &__sponsor {
+      width: 100%;
+      height: 200px;
+      position: relative;
+      margin-bottom: 40px;
+
+      @include tablet {
+        overflow: hidden;
+        height: 150px;
+        display: flex;
+      }
+
+      @include desktop {
+        margin-bottom: 0;
+        border-top: 1px solid color(blueText);
+      }
+
+      &__svg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 50px;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &__bg {
+        display: none;
+
+        @include tablet {
+          display: block;
+          width: 200px;
+          height: 101%;
+          background-color: color(blue);
+          z-index: 5;
+        }
+      }
+
+      &__bg::after {
+        display: none;
+        content: "";
+        width: 300px;
+        height: 300px;
+        background-color: color(blue);
+        transform: rotate(-60deg);
+        position: relative;
+        left: -30px;
+        top: -150px;
+        z-index: 2;
+
+        @include tablet {
+          display: block;
+        }
+      }
+
+      &__header {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+
+        @include tablet {
+          left: 110px;
+          z-index: 5;
+          top: 50%;
+          font-size: 30px;
+        }
+      }
+
+      &__images {
+        position: relative;
+        top: 50px;
+        height: calc(100% - 50px);
+        width: 100%;
+        display: flex;
+
+        @include tablet {
+          height: 150px;
+          top: 0;
+          flex-grow: 1;
+        }
+
+        &__img {
+          position: relative;
+          margin: 0 20px;
+          align-self: center;
+        }
+      }
+    }
+
+    &__partner {
+      width: 100%;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      display: none;
+      border: 1px solid color(blueText);
+
+      @include desktop {
+        display: flex;
+      }
+
+      &__bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 101%;
+        background-color: color(blue);
+        z-index: 5;
+      }
+
+      &__bg::before {
+        content: "";
+        width: 300px;
+        height: 300px;
+        background-color: color(blue);
+        transform: rotate(60deg);
+        position: absolute;
+        right: 0px;
+        top: -150px;
+        z-index: 2;
+      }
+
+      &__header {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+        z-index: 100;
+      }
+
+      &__images {
+        position: relative;
+        top: 50px;
+        height: calc(100% - 50px);
+        width: 100%;
+        display: flex;
+
+        @include tablet {
+          height: 150px;
+          top: 0;
+          flex-grow: 1;
+        }
+
+        &__img {
+          position: relative;
+          margin: 0 20px;
+          align-self: center;
+        }
+      }
+    }
+    &__rodzic {
+      width: 80%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      margin-bottom: 80px;
+
+      @include desktop {
+        width: 60%;
+      }
+
+      &__header {
+        color: color(blue);
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        @include tablet {
+          font-size: 30px;
+        }
+      }
+
+      &__text {
+        color: color(gray);
+        padding: 0 10px;
+
+        @include tablet {
+          font-size: 20px;
+        }
+      }
+
+      .text2 {
+        margin-top: 20px;
+      }
+    }
+
+    &__form {
+      width: 90%;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      z-index: 2;
+
+      &__header {
+        color: color(blue);
+        font-weight: 700;
+        font-size: 24px;
+
+        @include tablet {
+          font-size: 35px;
+        }
+      }
+
+      &__underHeader {
+        color: color(blue);
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @include tablet {
+          font-size: 23px;
+        }
+      }
+
+      &__text {
+        color: color(gray);
+        padding: 0 10px;
+        margin-bottom: 15px;
+
+        @include tablet {
+          font-size: 23px;
+        }
+      }
+
+      &__content {
+        width: 360px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid color(grayLighter);
+        background-color: white;
+        z-index: 2;
+
+        @include tablet {
+          width: 600px;
+        }
+
+        @include desktop {
+          width: 1200px;
+        }
+
+        &__svg {
+          position: relative;
+          z-index: 1;
+
+          @include tablet {
+            display: none;
+          }
+        }
+
+        &__svg2 {
+          position: relative;
+          z-index: 1;
+          display: none;
+
+          @include tablet {
+            display: block;
+          }
+          @include desktop {
+            display: none;
+          }
+        }
+
+        &__svg3 {
+          position: relative;
+          z-index: 1;
+          display: none;
+
+          @include desktop {
+            display: block;
+          }
+        }
+
+        &__header {
+          position: absolute;
+          top: 25px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-weight: 700;
+          font-size: 22px;
+          z-index: 2;
+
+          @include tablet {
+            font-size: 25px;
+          }
+        }
+
+        &__form {
+          width: 100%;
+          position: relative;
+          text-align: center;
+
+          &__label {
+            color: color(gray);
+            font-size: 18px;
+            margin: 15px auto 10px auto;
+            width: 80%;
+
+            @include tablet {
+              font-size: 23px;
+            }
+          }
+
+          &__checkbox {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 65%;
+            text-align: left;
+            color: color(gray);
+          }
+
+          &__zgoda {
+            width: 80%;
+            text-align: center;
+            font-size: 12px;
+            color: color(gray);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include tablet {
+              font-size: 14px;
+            }
+
+            input[type="checkbox"] {
+              width: 12px;
+              height: 12px;
+              margin-right: 10px;
+
+              @include tablet {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+
+          input {
+            width: 80%;
+            height: 40px;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid color(grayLighter);
+            outline: none;
+            transition: $transition;
+
+            @include tablet {
+              width: 45%;
+              font-size: 16px;
+              padding: 10px;
+              height: 45px;
+            }
+          }
+
+          input:focus {
+            border: 1px solid color(gray);
+          }
+
+          input[type="radio"] {
+            position: relative;
+            left: 0;
+            width: 13px;
+            height: 13px;
+            margin: 0 20px 10px 0;
+
+            @include tablet {
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          .wyslij {
+            width: 150px;
+            height: 40px;
+            background-color: color(blue);
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            margin: 20px auto 40px auto;
+            cursor: pointer;
+            display: none;
+
+            @include tablet {
+              line-height: 33px;
+              height: 50px;
+              width: 160px;
+              font-size: 22px;
+            }
+          }
+
+          .wyslijInvisible {
+            width: 150px;
+            height: 40px;
+            background-color: rgb(77, 77, 77);
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 40px;
+            margin: 20px auto 40px auto;
+            display: block;
+
+            @include tablet {
+              line-height: 50px;
+              height: 50px;
+              width: 160px;
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    &__footer {
+      position: relative;
+      bottom: 40px;
+      width: 100vw;
+      height: 400px;
+      z-index: 1;
+
+      &__backLogo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 280px;
+        height: 312px;
+        opacity: 0.4;
+
+        @include tablet {
+          top: 47%;
+        }
+      }
+
+      &__logo {
+        position: absolute;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        width: 120px;
+        height: 142px;
+
+        @include tablet {
+          width: 142px;
+          height: 164px;
+          top: 40%;
+        }
+      }
+
+      &__upperText {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: 300;
+
+        &__text {
+          position: relative;
+          left: -1%;
+          text-align: center;
+
+          @include tablet {
+            font-size: 22px;
+            margin: 0 100px;
+          }
+        }
+
+        &__text2 {
+          position: relative;
+          right: -3%;
+          text-align: center;
+
+          @include tablet {
+            font-size: 22px;
+            margin: 0 100px;
+          }
+        }
+      }
+
+      &__bottomText {
+        position: absolute;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        z-index: 3;
+
+        @include tablet {
+          font-size: 22px;
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(49, 77, 143);
+        color: white;
+        line-height: 50px;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        z-index: 3;
+      }
+
+      .opacity {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(60, 94, 173, 0.9);
+        z-index: 2;
+      }
+    }
+
+    &--active {
+      position: relative;
+      top: 0;
+    }
+  }
+}
+
+.menuPC {
+  &__menu {
+    background-color: color(blueMenu);
+  }
+
+  &__sections {
+    &__section {
+      &__items {
+        &__item {
+          background-color: color(blueMenu);
+        }
+      }
+    }
+  }
+}

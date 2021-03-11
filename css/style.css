@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000;
+  background-color: white;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu__svg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 50px;
+}
+
+.menu__header {
+  position: relative;
+  height: 50px;
+  top: 0;
+}
+
+.menu__header__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+
+.menu__header__off {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu__header__off .lines {
+  width: 80%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+}
+
+.menu__header__off .oposite {
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+          transform: translateX(-50%) rotate(-45deg);
+}
+
+.menu__container {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+}
+
+.menu__container__sections {
+  font-size: 20px;
+  line-height: 45px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid rgba(194, 194, 194, 0.541);
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: black;
+}
+
+.menu__container .aktualnosci {
+  color: gray;
+  font-weight: 300;
+  position: relative;
+  left: 20px;
+  width: calc(100% - 20px);
+}
+
+.menu__media {
+  position: relative;
+  top: 30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  height: 100px;
+}
+
+@media (min-width: 750px) {
+  .menu__media {
+    top: 80px;
+  }
+}
+
+.menu__media__text {
+  color: gray;
+  font-size: 20px;
+  text-align: center;
+}
+
+.menu__media__svgContainer {
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__media__svgContainer svg {
+  margin: 0 5px;
+}
+
+.menu__footer {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size-adjust: 14px;
+  font-weight: 300;
+  position: relative;
+  top: 120px;
+}
+
+.menuPC {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .menuPC {
+    display: block;
+  }
+}
+
+.menuPC__menu {
+  width: 100%;
+  height: 100px;
+  background-color: #27448e;
+  overflow: hidden;
+}
+
+.menuPC__logoBG {
+  font-family: "Dancing Script", cursive;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  background-color: #456dc8;
+  z-index: 2;
+}
+
+.menuPC__logoBG img {
+  position: relative;
+  top: 55%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menuPC__logoBG span {
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  font-size: 30px;
+  color: white;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: 700;
+}
+
+.menuPC__logoBG::after {
+  content: "";
+  width: 150px;
+  height: 120px;
+  position: absolute;
+  top: -17px;
+  right: -60px;
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+  background-color: #456dc8;
+  z-index: -1;
+}
+
+.menuPC__sections {
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 360px;
+  top: 0;
+}
+
+.menuPC__sections__section {
+  font-size: 16px;
+  color: white;
+  margin: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1500px) {
+  .menuPC__sections__section {
+    font-size: 17px;
+    margin: 0 10px;
+  }
+}
+
+.menuPC__sections__section__header {
+  height: 100px;
+  line-height: 100px;
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+  margin-bottom: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  z-index: 6;
+}
+
+.menuPC__sections__section__header:hover {
+  color: #dddddd;
+}
+
+.menuPC__sections__section__header:hover ~ .menuPC__sections__section__items {
+  top: 0;
+  visibility: visible;
+}
+
+.menuPC__sections__section__items {
+  visibility: hidden;
+  position: relative;
+  top: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #27448e;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.menuPC__sections__section__items__item {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  z-index: 5;
+}
+
+.menuPC__sections__section__items:hover {
+  top: 0;
+  visibility: visible;
+}
+
+.menuPC__media {
+  height: 100%;
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: none;
+}
+
+@media (min-width: 1340px) {
+  .menuPC__media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1500px) {
+  .menuPC__media {
+    width: 200px;
+  }
+}
+
+.wylacz {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

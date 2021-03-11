@@ -1,0 +1,245 @@
+.main__zamowienie {
+  position: relative;
+  margin-top: 40px;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie {
+    margin-top: 140px;
+  }
+}
+
+.main__zamowienie__header {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-bottom: 40px;
+}
+
+.main__zamowienie__header__header {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  color: #456dc8;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__header__header {
+    font-size: 28px;
+  }
+}
+
+.main__zamowienie__header__text {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__header__text {
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.main__zamowienie__przedmiot {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 750px) {
+  .main__zamowienie__przedmiot {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot {
+    width: 1100px;
+    height: 600px;
+  }
+}
+
+.main__zamowienie__przedmiot__img {
+  width: 250px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot__img {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+.main__zamowienie__przedmiot__header {
+  text-align: center;
+  color: #456dc8;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot__header {
+    position: absolute;
+    top: 0;
+    right: 250px;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+
+.main__zamowienie__przedmiot__opis {
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot__opis {
+    position: absolute;
+    top: 35px;
+    right: 250px;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+
+.main__zamowienie__przedmiot__cena {
+  text-align: center;
+  color: #456dc8;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot__cena {
+    position: absolute;
+    top: 60px;
+    right: 250px;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+
+.main__zamowienie__przedmiot__form {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  .main__zamowienie__przedmiot__form {
+    width: 500px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+  }
+}
+
+.main__zamowienie__przedmiot__form__input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 17px;
+  margin: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 750px) {
+  .main__zamowienie__przedmiot__form__input {
+    width: 49.5%;
+  }
+}
+
+.main__zamowienie__przedmiot__form__input::-webkit-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__input:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__input::-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__input::placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__select {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 17px;
+  margin: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main__zamowienie__przedmiot__form__option {
+  color: black;
+}
+
+.main__zamowienie__przedmiot__form__textarea {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.main__zamowienie__przedmiot__form__textarea::-webkit-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__textarea:-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__textarea::-ms-input-placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__textarea::placeholder {
+  color: rgba(128, 128, 128, 0.836);
+}
+
+.main__zamowienie__przedmiot__form__submit {
+  width: 170px;
+  height: 50px;
+  background-color: #456dc8;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 19px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  color: white;
+}
+/*# sourceMappingURL=order.css.map */

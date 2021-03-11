@@ -1,0 +1,55 @@
+.main__btnContainer {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 310px;
+}
+
+.main__a {
+  position: relative;
+  top: 50px;
+  left: 47%;
+}
+
+#usun {
+  width: 130px;
+  height: 40px;
+  background-color: #4fdb4f;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #616161;
+  font-size: 20px;
+  float: left;
+  margin-right: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#usun:hover {
+  color: #868686;
+}
+
+#anuluj {
+  width: 130px;
+  height: 40px;
+  background-color: #db4f4f;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #616161;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#anuluj:hover {
+  color: #868686;
+}
+/*# sourceMappingURL=remove.css.map */

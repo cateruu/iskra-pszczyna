@@ -1,0 +1,356 @@
+.main__terminarz {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  .main__terminarz {
+    display: none;
+  }
+}
+
+.main__terminarz__header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #27448e;
+}
+
+.main__terminarz__header__wybor {
+  height: 50px;
+  width: 100px;
+  background-color: #4161b8;
+  border: none;
+  outline: 0px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-align-last: center;
+}
+
+.main__terminarz__header__wybor option {
+  border: none;
+  text-align-last: center;
+  outline: 0px;
+}
+
+.main__terminarz__header__text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 700;
+  display: block;
+}
+
+.main__terminarz__mecz {
+  width: 100%;
+  height: 80px;
+  background-color: #3759ad;
+  position: relative;
+}
+
+.main__terminarz__mecz__iskra {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  -webkit-transform: translateX(-135%);
+          transform: translateX(-135%);
+  font-size: 14px;
+  width: 140px;
+}
+
+@media (min-width: 750px) {
+  .main__terminarz__mecz__iskra {
+    -webkit-transform: translateX(-170%);
+            transform: translateX(-170%);
+  }
+}
+
+.main__terminarz__mecz__iskraL {
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-140%);
+          transform: translateX(-140%);
+}
+
+@media (min-width: 750px) {
+  .main__terminarz__mecz__iskraL {
+    -webkit-transform: translateX(-170%);
+            transform: translateX(-170%);
+  }
+}
+
+.main__terminarz__mecz__wynik {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  width: 38px;
+  text-align: center;
+}
+
+.main__terminarz__mecz__logo {
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+@media (min-width: 750px) {
+  .main__terminarz__mecz__logo {
+    -webkit-transform: translateX(80%);
+            transform: translateX(80%);
+  }
+}
+
+.main__terminarz__mecz__przeciwnik {
+  text-align: center;
+  color: white;
+  position: absolute;
+  height: 50px;
+  left: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  font-size: 14px;
+  width: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 750px) {
+  .main__terminarz__mecz__przeciwnik {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+.main__terminarz__mecz__data {
+  position: absolute;
+  bottom: 5px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.main__terminarz .r {
+  background-color: #456dc8;
+}
+
+.main__terminarzPC {
+  position: relative;
+  width: 80%;
+  margin-top: 100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px;
+  padding-bottom: 40px;
+  background-color: #27448e;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .main__terminarzPC {
+    display: block;
+  }
+}
+
+.main__terminarzPC__header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+}
+
+.main__terminarzPC__header__wybor {
+  height: 50px;
+  width: 100px;
+  background-color: #4161b8;
+  border: none;
+  outline: 0px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-align-last: center;
+}
+
+.main__terminarzPC__header__wybor option {
+  border: none;
+  text-align-last: center;
+  outline: 0px;
+}
+
+.main__terminarzPC__header__text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+}
+
+.main__terminarzPC__mecz {
+  margin: 10px 0;
+  height: 80px;
+  position: relative;
+  color: white;
+  background-color: #4161b8;
+}
+
+.main__terminarzPC__mecz__msc {
+  height: 100%;
+  width: 80px;
+  position: relative;
+  background-color: #456dc8;
+  color: white;
+}
+
+.main__terminarzPC__mecz__msc__day {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.main__terminarzPC__mecz__msc__msc {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.main__terminarzPC__mecz__dzien {
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  left: 79px;
+  top: 0;
+  background-color: #4161b8;
+}
+
+.main__terminarzPC__mecz__dzien__day {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.main__terminarzPC__mecz__dzien__godzina {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.main__terminarzPC__mecz__content {
+  width: calc(100% - 160px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+
+.main__terminarzPC__mecz__content__iskra {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+  font-size: 20px;
+}
+
+.main__terminarzPC__mecz__content__iskraL {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-140%, -50%);
+          transform: translate(-140%, -50%);
+  height: 70px;
+}
+
+.main__terminarzPC__mecz__content__wynik {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.main__terminarzPC__mecz__content__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  width: 55px;
+}
+
+.main__terminarzPC__mecz__content__przeciwnik {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(30%, -50%);
+          transform: translate(30%, -50%);
+  font-size: 20px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__terminarzPC .r {
+  background-color: #456dc8;
+}
+/*# sourceMappingURL=termin.css.map */

@@ -1,0 +1,147 @@
+.main {
+  &__dodaj {
+    width: 80%;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid rgb(199, 199, 199);
+
+    &__header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      text-align: center;
+      margin-bottom: 20px;
+
+      &__select {
+        width: 250px;
+        height: 40px;
+        padding: 5px;
+        font-size: 18px;
+        margin-right: 20px;
+      }
+
+      &__date {
+        width: 250px;
+        height: 40px;
+        padding: 5px;
+        font-size: 18px;
+        margin-right: 20px;
+      }
+
+      &__submit {
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        background-color: rgb(47, 189, 47);
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+    top: 40px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+
+    table {
+      width: 45%;
+
+      td,
+      th {
+        border-bottom: 1px solid rgb(185, 185, 185);
+        padding: 10px;
+      }
+
+      td {
+        padding: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.button_option {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: rgb(77, 189, 77);
+  cursor: pointer;
+}
+
+.aOption {
+  text-decoration: none;
+  color: rgb(77, 189, 77);
+}
+
+.aOption:hover {
+  color: rgb(56, 138, 56);
+}
+
+.option {
+  color: rgb(77, 189, 77);
+  cursor: pointer;
+}
+
+.reset {
+  color: rgb(207, 63, 63);
+  transition: 0.2s;
+}
+.reset:hover {
+  color: rgb(163, 50, 50);
+}
+
+.info {
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.succes {
+  background-color: rgb(91, 207, 106);
+  border: 2px solid rgb(61, 231, 84);
+  width: 250px;
+}
+
+.error {
+  width: 630px;
+  background-color: rgb(235, 99, 99);
+  border: 2px solid rgb(235, 57, 57);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.accept {
+  background: none;
+  border: none;
+  outline: none;
+  color: rgb(51, 185, 51);
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: none;
+}

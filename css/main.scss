@@ -1,0 +1,879 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  blueMenu: rgb(39, 68, 142),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$transition: 0.2s;
+$tablet: 750px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+body,
+html {
+  overflow: inherit;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include desktop {
+    display: none;
+  }
+
+  &__header {
+    width: 100%;
+    height: 50px;
+    background-color: color(blue);
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-250%, -45%);
+      height: 45px;
+    }
+
+    p {
+      position: absolute;
+      font-size: 24px;
+      font-family: "Dancing Script", cursive;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, -50%);
+      font-weight: 700;
+    }
+  }
+
+  &__box {
+    width: 100%;
+    height: calc(33vh - 14px);
+    position: relative;
+    overflow: hidden;
+
+    &__img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+      z-index: 1;
+    }
+
+    .opacity {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(62, 113, 255, 0.8);
+    }
+    .opacity-senior {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__container {
+      width: 80%;
+      height: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      text-align: center;
+      color: white;
+
+      &__content {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &__header {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      &__text {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .senior {
+    background-color: white;
+  }
+  .senior-text {
+    color: color(blue);
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.mainPC {
+  display: none;
+  position: relative;
+  width: 100%;
+
+  @include desktop {
+    display: block;
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+      width: 250px;
+      height: 100%;
+      margin: 0 70px;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &__text {
+        position: absolute;
+        bottom: 15px;
+        color: color(gray);
+        font-size: 22px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__aktualnosci {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: color(blueImage);
+
+    .glide__slide {
+      &__header {
+        top: 50%;
+      }
+
+      &__desc {
+        top: 58%;
+      }
+    }
+  }
+
+  &__sections {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+
+    &__section {
+      position: relative;
+      width: 33.33333%;
+      height: 100%;
+      background-color: color(blue);
+
+      &__content {
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        &__textContainer {
+          position: relative;
+          margin: 0 15px;
+          width: 220px;
+
+          &__header {
+            font-weight: 700;
+            font-size: 18px;
+          }
+
+          &__text {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    .t {
+      color: color(blue);
+    }
+
+    .r {
+      background-color: white;
+    }
+  }
+
+  &__live {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px 0;
+
+    &__header {
+      text-align: center;
+      font-size: 28px;
+      color: color(blue);
+      font-weight: 700;
+      display: block;
+      position: relative;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__circle {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: rgb(221, 57, 57);
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(1500%);
+    }
+
+    &__mecz {
+      height: 150px;
+      width: 600px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 25px 0;
+      display: flex;
+
+      &__team {
+        position: relative;
+        left: 50%;
+        transform: translate(-150%);
+        height: 100%;
+        width: 230px;
+
+        &__nazwa {
+          position: relative;
+          top: 50%;
+          left: -50px;
+          transform: translateY(-50%);
+          width: 150px;
+          color: color(blue);
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 70px;
+          transform: translateY(-45%);
+          width: 130px;
+        }
+      }
+
+      &__wynik {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 100px;
+
+        &__vs {
+          font-size: 20px;
+          color: color(blue);
+          text-align: center;
+        }
+
+        &__wynik {
+          font-size: 33px;
+          color: color(blue);
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+
+      &__team2 {
+        position: relative;
+        left: 50%;
+        transform: translateX(-20%);
+        height: 100%;
+        width: 230px;
+
+        &__nazwa {
+          position: relative;
+          top: 50%;
+          left: 70px;
+          transform: translateY(-50%);
+          width: 150px;
+          color: color(blue);
+          font-weight: 700;
+          font-size: 20px;
+        }
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: -70px;
+          transform: translateY(-50%);
+          height: 130px;
+        }
+      }
+    }
+
+    &__wydarzenia {
+      text-align: center;
+    }
+
+    hr {
+      background-color: color(grayLighter);
+      border: none;
+      height: 2px;
+      margin: 15px 0;
+    }
+  }
+
+  &__mecze {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: color(blueMenu);
+
+    &__backLogo {
+      position: absolute;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      opacity: 0.1;
+    }
+
+    &__mecz {
+      width: 400px;
+      height: 85%;
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translateY(-50%);
+
+      &__data {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      &__teams {
+        display: flex;
+
+        &__team {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            width: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__team2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            height: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__vs {
+          position: absolute;
+          bottom: 0;
+          left: 150px;
+          height: 80%;
+          width: 100px;
+
+          &__text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &__wynik {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    &__mecz2 {
+      width: 400px;
+      height: 85%;
+      position: absolute;
+      top: 50%;
+      right: 8%;
+      transform: translateY(-50%);
+
+      &__data {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      &__teams {
+        display: flex;
+
+        &__team {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            width: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__team2 {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 150px;
+          height: 80%;
+
+          img {
+            position: absolute;
+            height: 120px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &__nazwa {
+            position: absolute;
+            top: 135px;
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+          }
+        }
+
+        &__vs {
+          position: absolute;
+          bottom: 0;
+          left: 150px;
+          height: 80%;
+          width: 100px;
+
+          &__text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          &__wynik {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__media {
+    width: 70%;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+
+    &__header {
+      font-size: 28px;
+      color: color(blue);
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        width: 33.333333%;
+
+        svg {
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &__header {
+          margin: 15px 10px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 700;
+          color: color(blue);
+        }
+
+        &__text {
+          width: 95%;
+          text-align: center;
+          color: color(gray);
+        }
+      }
+    }
+  }
+
+  &__sponsor {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 130px;
+    display: flex;
+    margin-bottom: 0;
+    border-top: 1px solid color(blueText);
+
+    &__bg {
+      display: block;
+      width: 200px;
+      height: 101%;
+      background-color: color(blue);
+      z-index: 5;
+    }
+
+    &__bg::after {
+      display: block;
+      content: "";
+      width: 300px;
+      height: 300px;
+      background-color: color(blue);
+      transform: rotate(-60deg);
+      position: relative;
+      left: -30px;
+      top: -150px;
+      z-index: 2;
+    }
+
+    &__header {
+      position: absolute;
+      top: 50%;
+      left: 110px;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      color: white;
+      z-index: 5;
+    }
+
+    &__images {
+      position: relative;
+      top: 0;
+      height: calc(100% - 50px);
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-grow: 1;
+
+      &__img {
+        position: relative;
+        margin: 0 20px;
+        align-self: center;
+      }
+    }
+  }
+
+  &__partner {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+    height: 130px;
+    display: flex;
+    margin-bottom: 0;
+    border-top: 1px solid color(blueText);
+
+    &__bg {
+      display: block;
+      background-color: color(blue);
+      z-index: 5;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 200px;
+      height: 101%;
+    }
+
+    &__bg::before {
+      content: "";
+      width: 300px;
+      height: 300px;
+      background-color: color(blue);
+      transform: rotate(60deg);
+      position: absolute;
+      right: 0px;
+      top: -150px;
+      z-index: 2;
+    }
+
+    &__header {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+      font-size: 30px;
+      color: white;
+      z-index: 100;
+    }
+
+    &__images {
+      position: relative;
+      top: 0;
+      width: 150px;
+      height: 100%;
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+
+    &__backLogo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 280px;
+      height: 312px;
+      opacity: 0.4;
+
+      @include tablet {
+        top: 47%;
+      }
+    }
+
+    &__logo {
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      width: 120px;
+      height: 142px;
+
+      @include tablet {
+        width: 142px;
+        height: 164px;
+        top: 40%;
+      }
+    }
+
+    &__upperText {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-weight: 300;
+
+      &__text {
+        position: relative;
+        left: -1%;
+        text-align: center;
+
+        @include tablet {
+          font-size: 22px;
+          margin: 0 100px;
+        }
+      }
+
+      &__text2 {
+        position: relative;
+        right: -3%;
+        text-align: center;
+
+        @include tablet {
+          font-size: 22px;
+          margin: 0 100px;
+        }
+      }
+    }
+
+    &__bottomText {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      font-weight: 300;
+      z-index: 3;
+
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background-color: rgb(49, 77, 143);
+      color: white;
+      line-height: 50px;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      z-index: 3;
+    }
+
+    .opacity {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(60, 94, 173, 0.9);
+      z-index: 2;
+    }
+  }
+}
+
+.menuPC {
+  position: sticky;
+  top: 0;
+  left: 0;
+}

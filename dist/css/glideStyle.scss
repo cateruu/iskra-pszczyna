@@ -1,0 +1,173 @@
+$colors: (
+  blue: rgb(69, 109, 200),
+  blueImage: rgba(62, 113, 255, 0.46),
+  blueText: rgba(81, 125, 228, 0.8),
+  gray: rgba(0, 0, 0, 0.6),
+  grayLighter: rgba(0, 0, 0, 0.2),
+);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+$tablet: 800px;
+$desktop: 1200px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+.glide {
+  height: 100%;
+  &__track {
+    height: 100%;
+  }
+
+  &__slides {
+    height: 100%;
+  }
+
+  &__slide {
+    position: relative;
+
+    &__header {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+
+      @include tablet {
+        top: 45%;
+        font-size: 30px;
+      }
+    }
+
+    &__desc {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+
+      @include tablet {
+        top: 60%;
+        font-size: 20px;
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 101%;
+      max-width: 101%;
+      min-height: 100%;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 25px;
+
+    &--left {
+      left: 50px;
+
+      @include tablet {
+        left: 100px;
+      }
+    }
+
+    &--right {
+      right: 50px;
+
+      @include tablet {
+        right: 100px;
+      }
+    }
+  }
+
+  &__bullets {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  &__bullet {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    width: 18px;
+    height: 21px;
+    background-color: rgb(172, 172, 172);
+    border: none;
+    outline: none;
+
+    &--active {
+      background-color: white;
+    }
+  }
+
+  &__opacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(blueImage);
+    z-index: 2;
+  }
+}
+
+.slajder,
+.slajderPartner {
+  .glide {
+    &__track {
+      height: 100%;
+      position: relative;
+    }
+
+    &__slides {
+      height: 100%;
+    }
+
+    &__slide {
+      position: relative;
+      top: 10px;
+      height: 80%;
+      width: 300px;
+    }
+  }
+}
+
+#glide__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%);
+  min-height: 100px;
+  max-height: 100px;
+  min-width: auto;
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="50" viewBox="0 0 1200 50">
+  <defs>
+    <clipPath id="clip-iPad_12">
+      <rect width="1200" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="iPad_12" data-name="iPad – 12" clip-path="url(#clip-iPad_12)">
+    <rect width="1200" height="50" fill="#fff"/>
+    <rect id="Rectangle_326" data-name="Rectangle 326" width="1200" height="50" fill="#456dc8"/>
+    <rect id="Rectangle_207" data-name="Rectangle 207" width="52" height="50" fill="#172e6a" opacity="0.18"/>
+    <rect id="Rectangle_206" data-name="Rectangle 206" width="26" height="25" transform="translate(52)" fill="#172e6a" opacity="0.18"/>
+    <rect id="Rectangle_205" data-name="Rectangle 205" width="26" height="25" transform="translate(78 25)" fill="#172e6a" opacity="0.18"/>
+    <rect id="Rectangle_204" data-name="Rectangle 204" width="13" height="13" transform="translate(104 12)" fill="#172e6a" opacity="0.18"/>
+    <g id="Component_2_49" data-name="Component 2 – 49" transform="translate(1083)">
+      <rect id="Rectangle_111" data-name="Rectangle 111" width="52" height="50" transform="translate(65)" fill="#172e6a" opacity="0.18"/>
+      <rect id="Rectangle_114" data-name="Rectangle 114" width="26" height="25" transform="translate(39)" fill="#172e6a" opacity="0.18"/>
+      <rect id="Rectangle_115" data-name="Rectangle 115" width="26" height="25" transform="translate(13 25)" fill="#172e6a" opacity="0.18"/>
+      <rect id="Rectangle_116" data-name="Rectangle 116" width="13" height="13" transform="translate(0 12)" fill="#172e6a" opacity="0.18"/>
+    </g>
+  </g>
+</svg>

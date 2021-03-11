@@ -1,0 +1,949 @@
+body,
+html {
+  overflow: inherit;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .main {
+    display: none;
+  }
+}
+
+.main__header {
+  width: 100%;
+  height: 50px;
+  background-color: #456dc8;
+  position: relative;
+}
+
+.main__header img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-250%, -45%);
+          transform: translate(-250%, -45%);
+  height: 45px;
+}
+
+.main__header p {
+  position: absolute;
+  font-size: 24px;
+  font-family: "Dancing Script", cursive;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+  font-weight: 700;
+}
+
+.main__box {
+  width: 100%;
+  height: calc(33vh - 14px);
+  position: relative;
+  overflow: hidden;
+}
+
+.main__box__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.main__box .opacity {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(62, 113, 255, 0.8);
+}
+
+.main__box .opacity-senior {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main__box__container {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
+.main__box__container__content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main__box__container__header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.main__box__container__text {
+  margin-bottom: 5px;
+}
+
+.main .senior {
+  background-color: white;
+}
+
+.main .senior-text {
+  color: #456dc8;
+}
+
+.main footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.mainPC {
+  display: none;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .mainPC {
+    display: block;
+  }
+}
+
+.mainPC__header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPC__header__container {
+  width: 250px;
+  height: 100%;
+  margin: 0 70px;
+  position: relative;
+}
+
+.mainPC__header__container img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainPC__header__container__text {
+  position: absolute;
+  bottom: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+.mainPC__aktualnosci {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: rgba(62, 113, 255, 0.46);
+}
+
+.mainPC__aktualnosci .glide__slide__header {
+  top: 50%;
+}
+
+.mainPC__aktualnosci .glide__slide__desc {
+  top: 58%;
+}
+
+.mainPC__sections {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPC__sections__section {
+  position: relative;
+  width: 33.33333%;
+  height: 100%;
+  background-color: #456dc8;
+}
+
+.mainPC__sections__section__content {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.mainPC__sections__section__content__textContainer {
+  position: relative;
+  margin: 0 15px;
+  width: 220px;
+}
+
+.mainPC__sections__section__content__textContainer__header {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.mainPC__sections__section__content__textContainer__text {
+  font-size: 15px;
+}
+
+.mainPC__sections .t {
+  color: #456dc8;
+}
+
+.mainPC__sections .r {
+  background-color: white;
+}
+
+.mainPC__live {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 40px 0;
+}
+
+.mainPC__live__header {
+  text-align: center;
+  font-size: 28px;
+  color: #456dc8;
+  font-weight: 700;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__live__circle {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #dd3939;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(1500%);
+          transform: translateX(1500%);
+}
+
+.mainPC__live__mecz {
+  height: 150px;
+  width: 600px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 25px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPC__live__mecz__team {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-150%);
+          transform: translate(-150%);
+  height: 100%;
+  width: 230px;
+}
+
+.mainPC__live__mecz__team__nazwa {
+  position: relative;
+  top: 50%;
+  left: -50px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 150px;
+  color: #456dc8;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mainPC__live__mecz__team img {
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+  width: 130px;
+}
+
+.mainPC__live__mecz__wynik {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100px;
+}
+
+.mainPC__live__mecz__wynik__vs {
+  font-size: 20px;
+  color: #456dc8;
+  text-align: center;
+}
+
+.mainPC__live__mecz__wynik__wynik {
+  font-size: 33px;
+  color: #456dc8;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mainPC__live__mecz__team2 {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  height: 100%;
+  width: 230px;
+}
+
+.mainPC__live__mecz__team2__nazwa {
+  position: relative;
+  top: 50%;
+  left: 70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 150px;
+  color: #456dc8;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.mainPC__live__mecz__team2 img {
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 130px;
+}
+
+.mainPC__live__wydarzenia {
+  text-align: center;
+}
+
+.mainPC__live hr {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  height: 2px;
+  margin: 15px 0;
+}
+
+.mainPC__mecze {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background-color: #27448e;
+}
+
+.mainPC__mecze__backLogo {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 280px;
+  opacity: 0.1;
+}
+
+.mainPC__mecze__mecz {
+  width: 400px;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.mainPC__mecze__mecz__data {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.mainPC__mecze__mecz__teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPC__mecze__mecz__teams__team {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 80%;
+}
+
+.mainPC__mecze__mecz__teams__team img {
+  position: absolute;
+  width: 120px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__mecze__mecz__teams__team__nazwa {
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.mainPC__mecze__mecz__teams__team2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 80%;
+}
+
+.mainPC__mecze__mecz__teams__team2 img {
+  position: absolute;
+  height: 120px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__mecze__mecz__teams__team2__nazwa {
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.mainPC__mecze__mecz__teams__vs {
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+  height: 80%;
+  width: 100px;
+}
+
+.mainPC__mecze__mecz__teams__vs__text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainPC__mecze__mecz__teams__vs__wynik {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainPC__mecze__mecz2 {
+  width: 400px;
+  height: 85%;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.mainPC__mecze__mecz2__data {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.mainPC__mecze__mecz2__teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainPC__mecze__mecz2__teams__team {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 80%;
+}
+
+.mainPC__mecze__mecz2__teams__team img {
+  position: absolute;
+  width: 120px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__mecze__mecz2__teams__team__nazwa {
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.mainPC__mecze__mecz2__teams__team2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 80%;
+}
+
+.mainPC__mecze__mecz2__teams__team2 img {
+  position: absolute;
+  height: 120px;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__mecze__mecz2__teams__team2__nazwa {
+  position: absolute;
+  top: 135px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.mainPC__mecze__mecz2__teams__vs {
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+  height: 80%;
+  width: 100px;
+}
+
+.mainPC__mecze__mecz2__teams__vs__text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainPC__mecze__mecz2__teams__vs__wynik {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mainPC__media {
+  width: 70%;
+  position: relative;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-bottom: 100px;
+}
+
+.mainPC__media__header {
+  font-size: 28px;
+  color: #456dc8;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.mainPC__media__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mainPC__media__container__item {
+  width: 33.333333%;
+}
+
+.mainPC__media__container__item svg {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainPC__media__container__item__header {
+  margin: 15px 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #456dc8;
+}
+
+.mainPC__media__container__item__text {
+  width: 95%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.mainPC__sponsor {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(81, 125, 228, 0.8);
+}
+
+.mainPC__sponsor__bg {
+  display: block;
+  width: 200px;
+  height: 101%;
+  background-color: #456dc8;
+  z-index: 5;
+}
+
+.mainPC__sponsor__bg::after {
+  display: block;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #456dc8;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  position: relative;
+  left: -30px;
+  top: -150px;
+  z-index: 2;
+}
+
+.mainPC__sponsor__header {
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  z-index: 5;
+}
+
+.mainPC__sponsor__images {
+  position: relative;
+  top: 0;
+  height: calc(100% - 50px);
+  width: 100%;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.mainPC__sponsor__images__img {
+  position: relative;
+  margin: 0 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainPC__partner {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  border-top: 1px solid rgba(81, 125, 228, 0.8);
+}
+
+.mainPC__partner__bg {
+  display: block;
+  background-color: #456dc8;
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 101%;
+}
+
+.mainPC__partner__bg::before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #456dc8;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  position: absolute;
+  right: 0px;
+  top: -150px;
+  z-index: 2;
+}
+
+.mainPC__partner__header {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  z-index: 100;
+}
+
+.mainPC__partner__images {
+  position: relative;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.mainPC__footer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 1;
+}
+
+.mainPC__footer__backLogo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 280px;
+  height: 312px;
+  opacity: 0.4;
+}
+
+@media (min-width: 750px) {
+  .mainPC__footer__backLogo {
+    top: 47%;
+  }
+}
+
+.mainPC__footer__logo {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 120px;
+  height: 142px;
+}
+
+@media (min-width: 750px) {
+  .mainPC__footer__logo {
+    width: 142px;
+    height: 164px;
+    top: 40%;
+  }
+}
+
+.mainPC__footer__upperText {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-weight: 300;
+}
+
+.mainPC__footer__upperText__text {
+  position: relative;
+  left: -1%;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  .mainPC__footer__upperText__text {
+    font-size: 22px;
+    margin: 0 100px;
+  }
+}
+
+.mainPC__footer__upperText__text2 {
+  position: relative;
+  right: -3%;
+  text-align: center;
+}
+
+@media (min-width: 750px) {
+  .mainPC__footer__upperText__text2 {
+    font-size: 22px;
+    margin: 0 100px;
+  }
+}
+
+.mainPC__footer__bottomText {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  z-index: 3;
+}
+
+@media (min-width: 750px) {
+  .mainPC__footer__bottomText {
+    font-size: 22px;
+  }
+}
+
+.mainPC__footer footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #314d8f;
+  color: white;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  z-index: 3;
+}
+
+.mainPC__footer .opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 94, 173, 0.9);
+  z-index: 2;
+}
+
+.menuPC {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+/*# sourceMappingURL=main.css.map */

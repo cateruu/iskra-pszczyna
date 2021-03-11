@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^team-04_05$ rocznik-2004.php
+RewriteRule ^team-06$ rocznik-2006.php
+RewriteRule ^team-07$ rocznik-2007.php
+RewriteRule ^team-08$ rocznik-2008.php
+RewriteRule ^team-09$ rocznik-2009.php
+RewriteRule ^team-10$ rocznik-2010.php
+RewriteRule ^team-11$ rocznik-2011.php
+RewriteRule ^team-12$ rocznik-2012.php
+
+

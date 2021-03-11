@@ -1,0 +1,153 @@
+.main__dodaj {
+  width: 80%;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.main__dodaj__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main__dodaj__content {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main__dodaj__content__select {
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.main__dodaj__content__date {
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.main__dodaj__content__submit {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #2fbd2f;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.main__container {
+  position: relative;
+  top: 40px;
+  width: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main__container table {
+  width: 45%;
+}
+
+.main__container table td,
+.main__container table th {
+  border-bottom: 1px solid #b9b9b9;
+  padding: 10px;
+}
+
+.main__container table td {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.button_option {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #4dbd4d;
+  cursor: pointer;
+}
+
+.aOption {
+  text-decoration: none;
+  color: #4dbd4d;
+}
+
+.aOption:hover {
+  color: #388a38;
+}
+
+.option {
+  color: #4dbd4d;
+  cursor: pointer;
+}
+
+.reset {
+  color: #cf3f3f;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.reset:hover {
+  color: #a33232;
+}
+
+.info {
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.succes {
+  background-color: #5bcf6a;
+  border: 2px solid #3de754;
+  width: 250px;
+}
+
+.error {
+  width: 630px;
+  background-color: #eb6363;
+  border: 2px solid #eb3939;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.accept {
+  background: none;
+  border: none;
+  outline: none;
+  color: #33b933;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: none;
+}
+/*# sourceMappingURL=mecze.css.map */

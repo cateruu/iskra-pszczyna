@@ -1,0 +1,119 @@
+.main__header {
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin: 20px 0;
+  color: #313a46;
+}
+
+.main__formContainer {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+}
+
+.main__formContainer__label {
+  color: #9b9b9b;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.main__formContainer__label:nth-of-type(5) {
+  margin-top: 20px;
+}
+
+.main__formContainer__input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #9a9a9a;
+  margin-bottom: 20px;
+}
+
+.main__formContainer__textarea {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  resize: none;
+  border: 1px solid grey;
+  font-size: 18px;
+  line-height: 50px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.main__formContainer__submit {
+  display: block;
+  margin: 20px 0;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #3166da;
+  background-color: #537fdd;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.main__formContainer__submit:hover {
+  color: #cccccc;
+}
+
+.main__formContainer__img__a {
+  display: block;
+  margin: 20px 0;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #da9631;
+  background-color: #ddb153;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-align: center;
+  line-height: 40px;
+}
+
+.main__formContainer__img__a:hover {
+  color: #cccccc;
+}
+
+.main .info {
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.main .succes {
+  background-color: #5bcf6a;
+  border: 2px solid #3de754;
+  width: 250px;
+}
+
+.main .error {
+  width: 630px;
+  background-color: #eb6363;
+  border: 2px solid #eb3939;
+}
+
+.main hr {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+/*# sourceMappingURL=dodaj.css.map */

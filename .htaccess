@@ -1,0 +1,16 @@
+RewriteEngine On
+
+RewriteRule ^home$ index.php
+RewriteRule ^akademia$ junior.php
+RewriteRule ^senior$ profes.php
+RewriteRule ^aktualnosci$ news.php
+RewriteRule ^lekkoatletyka$ gym.php
+RewriteRule ^kontakt$ contact.php
+RewriteRule ^post$ article.php
+RewriteRule ^klub$ team.php
+RewriteRule ^skladki$ raise.php
+RewriteRule ^historia$ history.php
+RewriteRule ^stadion$ stadium.php
+RewriteRule ^zamowienia$ order.php
+RewriteRule ^terminarz$ termin.php
+RewriteRule ^login$ insert.php

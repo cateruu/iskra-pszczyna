@@ -1,0 +1,76 @@
+@media (min-width: 1200px) {
+  .main__header {
+    display: none;
+  }
+}
+
+.main__sections {
+  width: 80%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 1200px) {
+  .main__sections {
+    width: 60%;
+    top: 100px;
+    margin-bottom: 140px;
+  }
+}
+
+.main__sections__section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.main__sections__section__header {
+  font-size: 28px;
+  font-weight: 700;
+  color: #456dc8;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .main__sections__section__header {
+    font-size: 30px;
+  }
+}
+
+.main__sections__section__text {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 1200px) {
+  .main__sections__section__text {
+    font-size: 20px;
+  }
+}
+
+.main__sections__section__text__header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #456dc8;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1200px) {
+  .main__sections__section__text__header {
+    font-size: 22px;
+  }
+}
+
+.main__sections__section__textU {
+  font-size: 16px;
+  color: rgba(81, 125, 228, 0.8);
+}
+
+@media (min-width: 1200px) {
+  .main__sections__section__textU {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=raise.css.map */

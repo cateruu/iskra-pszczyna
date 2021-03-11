@@ -1,0 +1,135 @@
+.main__dodaj {
+  width: 80%;
+  position: relative;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 1px solid gray;
+}
+
+.main__dodaj__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main__dodaj input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #9a9a9a;
+  margin-bottom: 20px;
+}
+
+.main__dodaj__imgText {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.main__dodaj__submit {
+  display: block;
+  margin: 20px 0;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #3166da;
+  background-color: #537fdd;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.main__dodaj__submit:hover {
+  color: #cccccc;
+}
+
+.main__dodaj__edit {
+  display: block;
+  margin: 20px 0;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #da9631;
+  background-color: #ddb153;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-align: center;
+  line-height: 40px;
+}
+
+.main__edytuj {
+  width: 80%;
+  position: relative;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 1px solid gray;
+}
+
+.main__edytuj__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main__edytuj__container {
+  width: 100%;
+}
+
+.main__edytuj__container__table {
+  width: 100%;
+}
+
+.main__edytuj__container__table tr:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main__edytuj__container__table tr:nth-of-type(1) td:nth-of-type(3) {
+  text-align: center;
+}
+
+.main__edytuj__container__table tr a:nth-of-type(1) {
+  color: #4fd45a;
+  margin: 0 5px 0 0;
+}
+
+.main__edytuj__container__table tr a:nth-of-type(2) {
+  color: #d4534f;
+}
+
+.main__edytuj__container__table td {
+  padding: 10px;
+  border-bottom: 1px solid #adadad;
+}
+
+.info {
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 10px;
+}
+
+.succes {
+  background-color: #5bcf6a;
+  border: 2px solid #3de754;
+  width: 250px;
+}
+
+.error {
+  width: 630px;
+  background-color: #eb6363;
+  border: 2px solid #eb3939;
+}
+/*# sourceMappingURL=teams.css.map */

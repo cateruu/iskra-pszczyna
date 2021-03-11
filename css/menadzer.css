@@ -1,0 +1,124 @@
+.main__header {
+  width: 100%;
+  height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin: 20px 0;
+  color: #313a46;
+}
+
+.main__formContainer {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+}
+
+.main__formContainer__label {
+  color: #9b9b9b;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.main__formContainer__label:nth-of-type(5) {
+  margin-top: 20px;
+}
+
+.main__formContainer__input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding: 0 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #9a9a9a;
+  margin-bottom: 20px;
+}
+
+.main__formContainer__submit {
+  display: block;
+  margin: 10px 0 20px 0;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #3166da;
+  background-color: #537fdd;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.main__formContainer__submit:hover {
+  color: #cccccc;
+}
+
+.main__table {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 20px;
+}
+
+.main__table tr:nth-of-type(1) {
+  background-color: #3d3d3d;
+}
+
+.main__table tr:nth-of-type(1) td {
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+.main__table tr a:nth-of-type(1) {
+  color: #4fd45a;
+  margin: 0 5px 0 0;
+}
+
+.main__table tr a:nth-of-type(2) {
+  color: #d4534f;
+}
+
+.main__table td {
+  padding: 10px;
+  border-bottom: 1px solid #585858;
+  color: #6d6d6d;
+}
+
+.main .info {
+  height: 50px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: white;
+  line-height: 50px;
+  padding: 0 10px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .succes {
+  background-color: #5bcf6a;
+  border: 2px solid #3de754;
+  width: 250px;
+}
+
+.main .error {
+  width: 630px;
+  background-color: #eb6363;
+  border: 2px solid #eb3939;
+}
+
+.main hr {
+  width: 80%;
+  margin: 0 auto 20px auto;
+}
+/*# sourceMappingURL=menadzer.css.map */
